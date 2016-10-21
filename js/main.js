@@ -16,7 +16,7 @@ $scope.invalid = {
 $scope.minFieldLength = 3;
 
 //run validators once
-runValidators()
+runValidators();
     
 //set page events
 setEvents();
