@@ -16,6 +16,6 @@ The api key and password for using the shopify API have been left blank in confi
 
 When choosing a local file to use as product image, the data is sent to the server as a base64 encoded string (supported by the API).
 
-All the products that have been created, can be viewed on the web store or the shopify admin page.
+All the products that have been created, can be viewed on the web store (catalog page) or the shopify admin page.
 
 
