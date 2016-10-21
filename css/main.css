@@ -1,0 +1,297 @@
+frame, #mainframe {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  margin-top: 50px;
+  border: 1px solid #888;
+  overflow: hidden;
+  height: auto;
+  background: rgba(52, 52, 52, 0.75);
+  color: white;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  border-radius: 6px; }
+
+frameTitle {
+  position: absolute;
+  width: 300px;
+  left: 50%;
+  margin: 10px 0px 0px -150px;
+  font-weight: bold;
+  font-size: 13px; }
+
+btn1, #mainframe button {
+  color: #444;
+  height: 40px;
+  border: 1px solid #aaa;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  border-radius: 6px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#cccccc));
+  background-image: -webkit-linear-gradient(top, #fefefe, #cccccc);
+  background-image: -moz-linear-gradient(top, #fefefe, #cccccc);
+  background-image: -ms-linear-gradient(top, #fefefe, #cccccc);
+  background-image: -o-linear-gradient(top, #fefefe, #cccccc);
+  background-image: linear-gradient(top, #fefefe, #cccccc);
+  padding: 5px 10px;
+  font-weight: bolder;
+  font-size: 12px;
+  text-shadow: -1px -1px 2px #ddd, 1px -1px 3px #ddd, -1px 1px 2px #ddd, 1px 1px 2px #ddd; }
+  btn1:hover, #mainframe button:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#c0c0c0));
+    background-image: -webkit-linear-gradient(top, #f0f0f0, #c0c0c0);
+    background-image: -moz-linear-gradient(top, #f0f0f0, #c0c0c0);
+    background-image: -ms-linear-gradient(top, #f0f0f0, #c0c0c0);
+    background-image: -o-linear-gradient(top, #f0f0f0, #c0c0c0);
+    background-image: linear-gradient(top, #f0f0f0, #c0c0c0); }
+  btn1:active, #mainframe button:active {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), to(#bbbbbb));
+    background-image: -webkit-linear-gradient(top, #e0e0e0, #bbbbbb);
+    background-image: -moz-linear-gradient(top, #e0e0e0, #bbbbbb);
+    background-image: -ms-linear-gradient(top, #e0e0e0, #bbbbbb);
+    background-image: -o-linear-gradient(top, #e0e0e0, #bbbbbb);
+    background-image: linear-gradient(top, #e0e0e0, #bbbbbb); }
+  btn1[disabled], #mainframe button[disabled] {
+    opacity: 0.3; }
+
+text1, #mainframe input:not([type="radio"]), #mainframe #filechooser {
+  color: #eee;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  border-radius: 6px;
+  padding: 10px;
+  background-color: rgba(172, 172, 172, 0.5); }
+  text1:focus, #mainframe input:focus:not([type="radio"]), #mainframe #filechooser:focus {
+    color: white;
+    background-color: rgba(172, 172, 172, 0.1);
+    outline: none;
+    border-color: skyblue; }
+  text1 option, #mainframe input:not([type="radio"]) option, #mainframe #filechooser option {
+    background-color: #343434; }
+
+elegantshadow, body > h1 {
+  letter-spacing: .10em;
+  text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474; }
+
+label1, #mainframe label {
+  display: inline-block;
+  font-size: 12px;
+  width: 100px;
+  margin-left: 20px;
+  padding-right: 5px; }
+
+hider, #hidefilter, #loading, #dropzone {
+  z-index: 99;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #555;
+  opacity: 0.8;
+  color: white;
+  display: none; }
+
+html, body {
+  margin: 0;
+  min-height: 100%; }
+
+* {
+  box-sizing: border-box; }
+
+li {
+  list-style: none; }
+
+body {
+  background: url(../assets/bg1.jpg) 0% 0%/cover no-repeat;
+  font-family: arial;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto; }
+  body button {
+    cursor: pointer;
+    outline: none; }
+  body > h1 {
+    font-variant: small-caps;
+    font-size: 1.2em;
+    font-weight: normal;
+    line-height: 25px;
+    width: 100%;
+    background: transparent;
+    color: #2e2e2e;
+    text-align: center; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+::-webkit-scrollbar {
+  width: 6px; }
+  ::-webkit-scrollbar-thumb {
+    background-color: #bbb; }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #ddd; }
+
+#feedbackmsg {
+  font-size: 14px;
+  box-sizing: border-box;
+  position: fixed;
+  padding: 20px;
+  border: 3px solid #ccc;
+  display: none;
+  text-align: left;
+  top: 0px;
+  margin-top: -130px;
+  width: 450px;
+  max-width: 95%;
+  height: auto;
+  white-space: normal;
+  z-index: 100;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  border-radius: 6px;
+  background: #999;
+  color: #222; }
+  #feedbackmsg .alertbtns {
+    margin-top: 10px;
+    text-align: center;
+    width: 100%; }
+    #feedbackmsg .alertbtns button {
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      border-radius: 6px;
+      margin-left: 2%;
+      width: 49%;
+      height: 40px;
+      padding: 10px;
+      background: #888;
+      border: 1px solid #555;
+      font-weight: bold; }
+      #feedbackmsg .alertbtns button:first-child {
+        margin-left: 0px; }
+      #feedbackmsg .alertbtns button.green {
+        background-image: -webkit-linear-gradient(top, #7ACFB2, #28B083); }
+      #feedbackmsg .alertbtns button.red {
+        background-image: -webkit-linear-gradient(top, #E87D7D, #C71818); }
+      #feedbackmsg .alertbtns button.blue {
+        background-image: -webkit-linear-gradient(top, #7DCFE8, #189EC7); }
+
+#loading {
+  z-index: 100;
+  padding-top: 100px;
+  font-size: 25px;
+  background-image: url(../assets/wait2.gif);
+  background-size: 80px 80px;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+filetype, #dropzone > input, #mainframe #filechooser > input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+  left: 0px;
+  top: 0px; }
+
+h1 > span {
+  font-size: 1.3em;
+  line-height: 25px;
+  margin: -10px 0px 0px 0px;
+  padding: 0px 10px;
+  display: inline-block; }
+  h1 > span > span {
+    font-size: 0.5em;
+    letter-spacing: 0em;
+    text-shadow: none;
+    color: #555; }
+
+#dropzone {
+  padding-top: 65px;
+  opacity: 1;
+  background-color: rgba(82, 82, 82, 0.5); }
+  #dropzone > span {
+    font-size: 25px; }
+
+#mainframe {
+  max-width: 460px;
+  text-align: left; }
+  #mainframe > h3 {
+    left: auto;
+    display: block;
+    margin: 10px 15px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #aaa; }
+    #mainframe > h3.other {
+      margin-top: 30px; }
+  @media (max-width: 600px) {
+    #mainframe label {
+      margin-top: 15px;
+      margin-bottom: 5px; } }
+  #mainframe input:not([type="radio"]) {
+    font-size: 12px;
+    width: 300px;
+    margin: 3px 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left; }
+    @media (max-width: 460px) {
+      #mainframe input:not([type="radio"]) {
+        width: 95%;
+        width: calc(100% - 20px); } }
+    #mainframe input:not([type="radio"]).invalid {
+      border-color: red; }
+  #mainframe input[type="radio"] {
+    float: right;
+    margin-top: 1px;
+    cursor: pointer; }
+  #mainframe button {
+    width: 200px;
+    height: 40px;
+    margin: 30px 25px;
+    float: right; }
+    @media (max-width: 460px) {
+      #mainframe button {
+        margin-right: 10px; } }
+    @media (max-width: 260px) {
+      #mainframe button {
+        width: 95%;
+        width: calc(100% - 20px); } }
+  #mainframe #filechooser {
+    display: inline-block;
+    width: 300px;
+    height: 150px;
+    position: relative;
+    vertical-align: middle;
+    margin-left: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+    #mainframe #filechooser > span {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      left: 0px;
+      top: 30px;
+      color: #ccc;
+      padding: 0px 15px;
+      font-size: 14px; }
+    #mainframe #filechooser.hasimg > span {
+      display: none; }
+    @media (max-width: 460px) {
+      #mainframe #filechooser {
+        width: 95%;
+        width: calc(100% - 20px); } }
+    #mainframe #filechooser.invalid {
+      border-color: red; }
+
+/*# sourceMappingURL=main.css.map */

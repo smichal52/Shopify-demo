@@ -1,0 +1,123 @@
+@import 'imports';
+
+
+//scss class
+filetype {
+    width:100%;height:100%;
+    position:absolute;z-index:1;
+    opacity:0;cursor:pointer;
+    left:0px;top:0px;
+}
+
+//page title
+h1 > span {
+    font-size:1.3em;
+    line-height:25px;
+    margin:-10px 0px 0px 0px;
+    padding:0px 10px;
+    display:inline-block;
+    > span {
+        font-size:0.5em;
+        letter-spacing:0em;
+        text-shadow:none;
+        color:#555;
+    }
+}
+
+
+//fullpage dropzone
+#dropzone {
+    @extend hider;
+    padding-top:65px;
+    opacity:1;
+    background-color:rgba(82, 82, 82, 0.5);
+    > input {@extend filetype;}
+    > span {font-size:25px;}
+}
+
+//inner frame
+#mainframe {
+    @extend frame; 
+    max-width:460px;
+    text-align:left;
+    
+    
+    //field group titles
+    > h3 {
+        left: auto;  
+        display: block; 
+        margin: 10px 15px;
+        font-size:15px;
+        font-weight:bold;
+        color:#aaa;
+        &.other {margin-top:30px;} 
+    }  
+    
+    //field labels
+    label {
+        @extend label1;
+        @media (max-width:600px) {margin-top:15px;margin-bottom:5px;}
+    }
+    
+    //fields
+    input:not([type="radio"]) {  
+        @extend text1;
+        font-size:12px;
+        width:300px; 
+        margin:3px 10px;
+        background-size:contain;
+        background-repeat: no-repeat;
+        background-position: left;
+        @media (max-width:460px) {
+            width:95%;//fallback if no calc support
+            width:calc(100% - 20px);
+        }
+        &.invalid {border-color:red;}
+    }
+    
+    //radio buttons
+    input[type="radio"] {float:right;margin-top:1px;cursor:pointer;}
+    
+    //save button
+    button {
+        @extend btn1;
+        width:200px;
+        height:40px;
+        margin: 30px 25px;
+        float: right;
+        @media (max-width:460px) {margin-right:10px;}
+        @media (max-width:260px) {width:95%;width:calc(100% - 20px);}
+    }
+    
+    //file chooser
+    #filechooser {
+        @extend text1;
+        display: inline-block;
+        width: 300px;
+        height: 150px;
+        position: relative; 
+        vertical-align: middle;
+        margin-left:10px;
+        background-size:contain;
+        background-repeat:no-repeat;
+        background-position:center;
+        
+        > input {@extend filetype;}
+        > span {    
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            left: 0px;
+            top: 30px;
+            color: #ccc;
+            padding:0px 15px;
+            font-size:14px;
+        }
+        &.hasimg {> span {display:none;}}
+        @media (max-width:460px) {
+            width:95%;//fallback if no calc support
+            width:calc(100% - 20px);
+        }
+        &.invalid {border-color:red;}
+    }
+}

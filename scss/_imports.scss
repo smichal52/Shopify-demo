@@ -1,0 +1,222 @@
+
+//border radius for buttons,fields,etc...
+$border-radius:6px;
+
+
+//############################# USEFUL MIXINS #########################################
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+}
+@mixin gradient-bg($from, $to) {
+    background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+    background-image: -webkit-linear-gradient(top, $from, $to);
+    background-image: -moz-linear-gradient(top, $from, $to);
+    background-image: -ms-linear-gradient(top, $from, $to);
+    background-image: -o-linear-gradient(top, $from, $to);
+    background-image: linear-gradient(top, $from, $to); 
+}
+@mixin txt-shadow($c) {
+    text-shadow:-1px -1px 2px $c,1px -1px 3px $c,-1px  1px 2px $c,1px  1px 2px $c;
+}
+
+
+
+//############################# CLASSES #########################################
+//page frames
+frame {
+    position:relative;
+    width:100%;
+    margin: auto;
+    margin-top:50px;
+    border:1px solid #888;
+    overflow:hidden;
+    height:auto;
+    background:rgba(52,52,52,0.75);
+    color:white;
+    @include border-radius($border-radius);
+}
+
+//page frame titles
+frameTitle {
+    position: absolute;
+    width: 300px;
+    left: 50%;
+    margin:10px 0px 0px -150px;
+    //color: white;
+    font-weight:bold;
+    font-size:13px;
+}
+
+//buttons
+btn1 {
+    color:#444;
+    height:40px;
+    border:1px solid #aaa;
+    @include border-radius($border-radius);
+    @include gradient-bg(#fefefe, #cccccc);
+    padding:5px 10px;
+    &:hover {@include gradient-bg(#f0f0f0, #c0c0c0);}
+    &:active {@include gradient-bg(#e0e0e0, #bbbbbb);}
+    &[disabled] {opacity:0.3}
+    font-weight:bolder;
+    font-size:12px;
+    @include txt-shadow(#ddd); 
+}
+
+
+//text fields
+text1 {
+    color:#eee;
+    border:1px solid #ccc;  
+    @include border-radius($border-radius);
+    padding:10px;
+    background-color: rgba(172, 172, 172, 0.5);
+    &:focus{
+        color:white;
+        background-color: rgba(172, 172, 172, 0.1);
+        outline: none;
+        border-color:skyblue;
+    }
+    option {background-color:#343434;}
+}
+
+
+//text shadow for headers
+elegantshadow {
+    letter-spacing: .10em;
+    text-shadow: 
+      1px -1px 0 #767676, 
+      -1px 2px 1px #737272, 
+      -2px 4px 1px #767474
+}
+
+//field labels
+label1 {
+    display:inline-block;
+    font-size:12px;
+    width:100px;
+    margin-left:20px;
+    padding-right:5px;
+}
+
+//full page screen filter
+hider {
+    z-index:99;
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    background-color:#555;
+    opacity:0.8;
+    color:white;
+    display:none;
+}
+ 
+
+
+
+
+
+
+//############################# GENERAL STYLING #########################################
+html,body{margin:0;min-height:100%;}   
+* {box-sizing:border-box;}
+li {list-style: none;}
+body{
+    background: url(../assets/bg1.jpg) 0% 0% / cover no-repeat;  
+    font-family:arial;
+    text-align:center;
+    overflow-x:hidden;
+    overflow-y:auto;
+    button {cursor:pointer;outline:none;}
+    > h1 {    
+        @extend elegantshadow;
+        font-variant:small-caps; 
+        font-size: 1.2em;
+        font-weight: normal;
+        line-height:25px;
+        width:100%;
+        background: transparent;
+        color:#2e2e2e;
+        text-align:center;
+    }
+}
+
+
+//hide number field spinners
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+//scrollbar
+::-webkit-scrollbar {
+    width:6px;
+    &-thumb {
+        background-color:#bbb;
+        &:hover{background-color:#ddd;}
+    } 
+}
+
+
+//############################# CUSTOM DIALOGS #########################################
+#feedbackmsg {
+  font-size:14px;
+  box-sizing: border-box;
+  position: fixed;
+  padding: 20px;
+  border: 3px solid #ccc;
+  display: none;
+  text-align: left; 
+  top: 0px;
+  margin-top: -130px;
+  width: 450px;
+  max-width: 95%;
+  height: auto; 
+  white-space: normal;
+  z-index: 100;
+  @include border-radius($border-radius);
+  background:#999;
+  color:#222;
+  
+  .alertbtns {
+    margin-top:10px;
+    text-align:center;
+    width: 100%;
+    button {
+      @include border-radius($border-radius);
+      margin-left:2%;
+      width: 49%;
+      height: 40px;
+      padding: 10px;
+      background: #888;
+      border:1px solid #555;
+      font-weight:bold;
+      &:first-child {margin-left:0px;}
+      &.green {background-image: -webkit-linear-gradient(top, #7ACFB2, #28B083);}
+      &.red   {background-image: -webkit-linear-gradient(top, #E87D7D, #C71818);}
+      &.blue  {background-image: -webkit-linear-gradient(top, #7DCFE8, #189EC7);}
+    }
+  }
+}
+
+
+#hidefilter {@extend hider;}
+#loading {
+    @extend hider;
+    z-index:100;
+    padding-top:100px;
+    font-size:25px;
+    background-image: url(../assets/wait2.gif);
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+
