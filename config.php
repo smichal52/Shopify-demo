@@ -1,8 +1,8 @@
 <?php
 
 //shopify credentials
-define(API_KEY, "36db000985409daca6b62af6209d139b");
-define(PASSWORD, "58107093f37390aa6fb1f18c4a0a3061");
+define(API_KEY, "...");
+define(PASSWORD, "...");
 define(STORE_URL, "smichal-shop.myshopify.com");
 
 
