@@ -1,6 +1,9 @@
 # Shopify-demo
 Simple web page that uses the shopify API to create a new product
 
+## Live version, linked to my own trial account
+https://smichal.000webhostapp.com/shopify-demo/
+
 ## Analysis
 The page consists of several text fields and an image selector, where you can choose a local image file (also works with drag and drop) or enter a url for a remote one.
 
