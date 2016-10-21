@@ -1,5 +1,5 @@
 # Shopify-demo
-Simple web page that uses the shopify API to create a new product
+Simple responsive web page, that uses the shopify API to create a new product.
 
 ## Live version, linked to my own trial account
 https://smichal.000webhostapp.com/shopify-demo/
