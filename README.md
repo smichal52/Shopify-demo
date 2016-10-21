@@ -14,6 +14,8 @@ After pressing the save button, the user will be informed regarding the success 
 ## Notes
 The api key and password for using the shopify API have been left blank in config.php file, they can be filled along with the appropriate store url to use the demo with any shopify account.
 
+When choosing a local file to use as product image, the data is sent to the server as a base64 encoded string (supported by the API).
+
 All the products that have been created, can be viewed on the web store or the shopify admin page.
 
 
